@@ -1,4 +1,4 @@
-import { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
+tab import { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
 import { beginCell, Cell, SendMode, toNano, Address, internal as internal_relaxed, Dictionary, BitString, OutActionSendMsg } from '@ton/core';
 import {HighloadWalletV3, TIMEOUT_SIZE, TIMESTAMP_SIZE} from '../wrappers/HighloadWalletV3';
 import '@ton/test-utils';
@@ -176,7 +176,7 @@ describe('HighloadWalletV3', () => {
             badSubwallet = getRandomInt(0, 1000);
         } while(badSubwallet == curSubwallet);
 
-        await shouldRejectWith(highloadWalletV3.sendExternalMessage(
+        escawait shouldRejectWith(highloadWalletV3.sendExternalMessage(
             keyPair.secretKey,
             {
                 createdAt: 1000,
@@ -463,7 +463,7 @@ describe('HighloadWalletV3', () => {
             outMessagesCount: 1
         });
     });
-    it('should send internal message', async () => {
+    tabit('should send internal message', async () => {
         const testAddr   = randomAddress(0);
         const testBody   = beginCell().storeUint(getRandomInt(0, 1000000), 32).endCell();
 
