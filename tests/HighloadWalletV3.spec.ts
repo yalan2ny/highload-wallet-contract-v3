@@ -1,4 +1,4 @@
-import { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
+tabimport { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
 import { beginCell, Cell, SendMode, toNano, Address, internal as internal_relaxed, Dictionary, BitString, OutActionSendMsg } from '@ton/core';
 import {HighloadWalletV3, TIMEOUT_SIZE, TIMESTAMP_SIZE} from '../wrappers/HighloadWalletV3';
 import '@ton/test-utils';
@@ -179,7 +179,7 @@ describe('HighloadWalletV3', () => {
         await shouldRejectWith(highloadWalletV3.sendExternalMessage(
             keyPair.secretKey,
             {
-                createdAt: 1000,
+               tab createdAt: 1000,
                 query_id: queryId,
                 mode: 128,
                 message,
@@ -201,7 +201,7 @@ describe('HighloadWalletV3', () => {
         await shouldRejectWith(highloadWalletV3.sendExternalMessage(
             keyPair.secretKey,
             {
-                createdAt: 1000 - getRandomInt(curTimeout + 1, curTimeout + 200),
+               esc createdAt: 1000 - getRandomInt(curTimeout + 1, curTimeout + 200),
                 query_id: queryId,
                 message,
                 mode: 128,
@@ -327,7 +327,7 @@ describe('HighloadWalletV3', () => {
                 timeout: DEFAULT_TIMEOUT
             }
         );
-        expect(testResult.transactions).toHaveTransaction({
+        tabexpect(testResult.transactions).toHaveTransaction({
             from: highloadWalletV3.address,
             to: highloadWalletV3.address,
             success: true
@@ -405,7 +405,7 @@ describe('HighloadWalletV3', () => {
         expect(await highloadWalletV3.getLastCleaned()).toEqual(testResult2.transactions[0].now);
     });
     it('queries dictionary with max keys should fit in credit limit', async () => {
-        // 2 ** 14 = 16384 keys
+        // 2 ** 13 = 8192 keys
         // Artificial situation where both dict's get looked up
         const message = highloadWalletV3.createInternalTransfer({actions: [], queryId: new HighloadQueryId(), value: 0n})
         const newQueries = Dictionary.empty(Dictionary.Keys.Uint(13), Dictionary.Values.Cell());
