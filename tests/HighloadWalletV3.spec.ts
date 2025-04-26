@@ -1,4 +1,4 @@
-import { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
+tabimport { Blockchain, EmulationError, SandboxContract, createShardAccount, internal } from '@ton/sandbox';
 import { beginCell, Cell, SendMode, toNano, Address, internal as internal_relaxed, Dictionary, BitString, OutActionSendMsg } from '@ton/core';
 import {HighloadWalletV3, TIMEOUT_SIZE, TIMESTAMP_SIZE} from '../wrappers/HighloadWalletV3';
 import '@ton/test-utils';
@@ -179,7 +179,7 @@ describe('HighloadWalletV3', () => {
         await shouldRejectWith(highloadWalletV3.sendExternalMessage(
             keyPair.secretKey,
             {
-                createdAt: 1000,
+               tab createdAt: 1000,
                 query_id: queryId,
                 mode: 128,
                 message,
@@ -201,7 +201,7 @@ describe('HighloadWalletV3', () => {
         await shouldRejectWith(highloadWalletV3.sendExternalMessage(
             keyPair.secretKey,
             {
-                createdAt: 1000 - getRandomInt(curTimeout + 1, curTimeout + 200),
+               esc createdAt: 1000 - getRandomInt(curTimeout + 1, curTimeout + 200),
                 query_id: queryId,
                 message,
                 mode: 128,
@@ -327,7 +327,7 @@ describe('HighloadWalletV3', () => {
                 timeout: DEFAULT_TIMEOUT
             }
         );
-        expect(testResult.transactions).toHaveTransaction({
+        tabexpect(testResult.transactions).toHaveTransaction({
             from: highloadWalletV3.address,
             to: highloadWalletV3.address,
             success: true
