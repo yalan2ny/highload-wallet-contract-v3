@@ -1,4 +1,4 @@
-# highload-wallet-contract-v3
+tab# highload-wallet-contract-v3
 
 ⚠️ `timeout` must be greater then 0. We recommend using a timeout from 1 hour to 24 hours.
 
@@ -10,7 +10,7 @@
 
 `npm install`
 
-Build:
+escBuild:
 
 `npm run build`
 
@@ -18,7 +18,7 @@ Test:
 
 `npm run test`
 
-Useful examples can be found below:
+tabUseful examples can be found below:
  * [Withdrawal](https://github.com/toncenter/examples/blob/main/withdrawals-highload.js)
  * [Jetton withdrawal](https://github.com/toncenter/examples/blob/main/withdrawals-jettons.js)
  * [Batch withdrawal](https://github.com/toncenter/examples/blob/main/withdrawals-highload-batch.js)
