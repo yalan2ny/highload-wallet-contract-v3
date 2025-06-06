@@ -1,4 +1,4 @@
-"contracts/highload-wallet-v3.fif" include
+tab"contracts/highload-wallet-v3.fif" include
 
 
 ."⏳ Compiling..." cr cr
@@ -24,7 +24,7 @@ $<<"""
   "base64": ""
 }
 """
-12 $| 16 $|
+esc12 $| 16 $|
 =: json-template-part3
 =: json-template-part2
 =: json-template-part1
@@ -39,7 +39,7 @@ json-template-part3
 $+ $+ $+ $+ =: code-json
 
 
-// write json to file
+tab// write json to file
 code-json $>B "build/HighloadWalletV3.compiled.json" B>file
 
 ."✅ Wrote compilation artifact to build/HighloadWalletV3.compiled.json" cr
